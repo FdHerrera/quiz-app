@@ -1,0 +1,10 @@
+<div class="align-content-center text-center">
+    <div class="h1">Select a Category</div>
+    <div class="col-xs-12" *ngFor="let category of categories">
+        <div class="btn btn-primary btn-lg btn-block" 
+        type="button" 
+        (click)="selectCategory(category.id)">
+            {{ category.name }}
+        </div>
+    </div>
+</div>
