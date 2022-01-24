@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { debounceTime, Observable } from "rxjs";
 import { Category } from "../model/category";
+import { CategoryService } from "../service/category.service";
 
 @Component({
     selector: 'quiz-home',
@@ -7,20 +9,27 @@ import { Category } from "../model/category";
     styleUrls: ['./quiz-home.component.css']
 })
 export class QuizHomeComponent implements OnInit {
-    categories: Array<Category>;
+    categories: Observable<Array<Category>>;
+    private categoryService: CategoryService;
 
-    ngOnInit(): void {
-        //TODO Make this method return categories from backend
-        this.categories = [
-            new Category(1, 'Alta categoria'),
-            new Category(2, 'Otra categoria re piola'),
-            new Category(3, 'Naah, esta es la buena'),
-            new Category(4, 'Nah esta no')
-        ]
+    constructor(categoryService: CategoryService) {
+        this.categoryService = categoryService;
     }
 
-    public selectCategory(categoryId: number): void{
-        console.log(this.categories[categoryId-1]);
+    ngOnInit(): void {
+        this.categories = this.categoryService.getCategories();
+    }
+
+    public selectCategory(categoryId: number): void {
+        console.log(this.categories[categoryId - 1]);
+    }
+
+    public showDescription(categoryId: number): void {
+        console.log(this.categories.subscribe(
+            categoriesFound => categoriesFound.filter(
+                category => category.id === categoryId
+            ).forEach(categoryFound => console.log(categoryFound))
+        ));
     }
 
 }
