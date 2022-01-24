@@ -15,7 +15,7 @@ export class QuizHomeComponent implements OnInit {
             new Category(1, 'Alta categoria'),
             new Category(2, 'Otra categoria re piola'),
             new Category(3, 'Naah, esta es la buena'),
-            new Category(4, 'Nah esta es una pija')
+            new Category(4, 'Nah esta no')
         ]
     }
 
