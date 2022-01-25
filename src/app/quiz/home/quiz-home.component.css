@@ -1,0 +1,21 @@
+.cards-table {
+    width: 100%;
+    flex-direction: row;
+}
+
+ .category-card {
+    background-color: midnightblue;
+    color: white;
+    width: 45%;
+    line-height: 100px;
+    margin: 5px;
+    text-align: center;
+ }
+
+ .h5 {
+     color: white;
+ }
+
+ .p {
+     color: white;
+ }

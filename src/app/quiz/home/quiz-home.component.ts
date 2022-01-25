@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { debounceTime, Observable } from "rxjs";
+import { Observable } from "rxjs";
 import { Category } from "../model/category";
 import { CategoryService } from "../service/category.service";
 
@@ -21,15 +21,8 @@ export class QuizHomeComponent implements OnInit {
     }
 
     public selectCategory(categoryId: number): void {
-        console.log(this.categories[categoryId - 1]);
+        
     }
 
-    public showDescription(categoryId: number): void {
-        console.log(this.categories.subscribe(
-            categoriesFound => categoriesFound.filter(
-                category => category.id === categoryId
-            ).forEach(categoryFound => console.log(categoryFound))
-        ));
-    }
 
 }
