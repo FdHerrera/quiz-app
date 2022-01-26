@@ -1,9 +1,11 @@
 <div class="h1 text-center">Select a Category</div>
 <div class="row cards-table">
-    <div class="category-card" *ngFor="let category of categories | async">
-        <div class="btn primary-btn form-group" (click)="selectCategory(category.id)">
-            <div class="h5">{{ category.name }}</div>
-            <div class="p">{{ category.description }}</div>
-        </div>
+    <div class="col-md-4 category-card btn primary-btn" 
+    *ngFor="let category of categories | async"
+    (click)="selectCategory(category.id)">
+    <div class="h5">
+        {{ category.name }}
+    </div>
+    <div class="p">{{ category.description }}</div>
     </div>
 </div>
