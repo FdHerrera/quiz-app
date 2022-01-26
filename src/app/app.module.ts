@@ -6,10 +6,9 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeaderComponent } from './header/header.component';
 import { IndexComponent } from './index/index.component';
-import { QuizGameComponent } from './quiz/game/quiz.component';
-import { QuizHomeComponent } from './quiz/home/quiz-home.component';
 import { ScoresComponent } from './score-table/scores.component';
 import { AppRoutingModule } from './app-routing.module';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     ContactComponent,
     IndexComponent,
-    QuizGameComponent,
-    QuizHomeComponent,
+    QuizComponent,
     ScoresComponent
   ],
   imports: [

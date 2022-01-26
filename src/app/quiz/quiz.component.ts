@@ -1,14 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable } from "rxjs";
-import { Category } from "../model/category";
-import { CategoryService } from "../service/category.service";
+import { Category } from "./model/category";
+import { CategoryService } from "./service/category.service";
 
 @Component({
     selector: 'quiz-home',
-    templateUrl: './quiz-home.component.html',
-    styleUrls: ['./quiz-home.component.css']
+    templateUrl: './quiz.component.html',
+    styleUrls: ['./quiz.component.css']
 })
-export class QuizHomeComponent implements OnInit {
+export class QuizComponent implements OnInit {
     categories: Observable<Array<Category>>;
     private categoryService: CategoryService;
 
