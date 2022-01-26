@@ -9,6 +9,7 @@ import { IndexComponent } from './index/index.component';
 import { ScoresComponent } from './score-table/scores.component';
 import { AppRoutingModule } from './app-routing.module';
 import { QuizComponent } from './quiz/quiz.component';
+import { QuizGameComponent } from './quiz/game/quiz-game.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { QuizComponent } from './quiz/quiz.component';
     ContactComponent,
     IndexComponent,
     QuizComponent,
+    QuizGameComponent,
     ScoresComponent
   ],
   imports: [

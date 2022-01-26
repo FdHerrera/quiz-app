@@ -5,11 +5,13 @@ import { IndexComponent } from './index/index.component';
 import { ScoresComponent } from './score-table/scores.component';
 import { ContactComponent } from './contact/contact.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { QuizGameComponent } from './quiz/game/quiz-game.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/index', pathMatch: 'full'},
   { path: 'index', component: IndexComponent },
   { path: 'quiz-home', component: QuizComponent },
+  { path: 'game', component: QuizGameComponent},
   { path: 'scores', component: ScoresComponent },
   { path: 'contact-me', component: ContactComponent }
 ]

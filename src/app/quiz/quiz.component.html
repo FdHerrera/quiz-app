@@ -1,6 +1,6 @@
 <div class="h1 text-center">Select a Category</div>
 <div class="row cards-table">
-    <div class="col-md-4 category-card btn primary-btn" 
+    <div class="col-md-4 category-card btn primary-btn" routerLink="/game" 
     *ngFor="let category of categories | async"
     (click)="selectCategory(category.id)">
     <div class="h5">
