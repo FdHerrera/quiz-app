@@ -2,8 +2,8 @@
 <div class="h1 text-center">{{ question | async }}</div>
 <div class="row cards-table">
     <div class="col-md-4 category-card btn primary-btn" 
-    *ngFor="let answer of answers | async"
-    (click)="selectCard(category.id)">
+    *ngFor="let answer of answers"
+    (click)="selectCard(answer.id)">
     <div class="h5">
         {{ category.name }}
     </div>
